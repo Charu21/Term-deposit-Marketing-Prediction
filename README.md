@@ -1,4 +1,4 @@
-# vlGWTfBzYwNrtBs8
+# Term Deposit Marketing
 
 ## Background:
 
@@ -47,10 +47,10 @@ What makes the customers buy? Tell us which feature we should be focusing more o
 - **Exploratory data analysis**
    - I first explored the data to gain insights with the help of histograms of distributions of features and feature importance. Data exploration showed there was no missing data. The primary problem with the    dataset was presence of imbalance in dataset. The data seen was highly imbalanced as the minority class(yes) is representing less than 10% of the total samples. Hence, employed sampling alogorithms SMOTE which addressed the imbalance by generating synthetic samples for the minority class. It creates new instances by interpolating between existing minority class samples, making the dataset more balanced.
 
-- ** Building models **
+- **Building models**
    - I then built several models: XGBoost, Random Forest, Decision Tree, Logistic Regression, Support Vector. I trained these models using training data (randomly selected from the whole dataset) at an 80% split. I compared these models along accuracy and F1 scores and elected to focus on LR models based on these results. Random Forest and XGBoost both seem pretty good so going ahead with testing them with the KFold Cross Validation.
 
-- ** Improving the model **
+- **Improving the model**
    - Random Forest and XG Boost as both seem to have pretty good scores or Precision, Recall and F1-Score which are more important when dataset is imbalanced in Binary Classification problems. When the distribution is severely skewed, it is likely that one or more folds will have few or no examples from the minority class. This means that some or perhaps many of the model evaluations will be misleading, as the model need only predict the majority class correctly. Thus used the Stratified KFold Cross Validation method.
 
 #### Conclusion
